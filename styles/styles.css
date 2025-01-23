@@ -1,0 +1,108 @@
+body {
+    background-color: #202020;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'NewSun', Arial, sans-serif;
+}
+
+.calculator {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.calculator:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    color: rgb(212, 208, 208);
+    font-family: 'Lemon', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@font-face {
+    font-family: 'NewSun';
+    src: url('../fonts/Next Sunday.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Lemon';
+    src: url('../fonts/Winter Lemon.ttf') format('truetype');
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    background-color: #444;
+    border-color: #680C2F;
+}
+
+input:invalid {
+    border-color: #680C2F;
+}
+
+.operations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #680C2F;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 23px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    width: 95px; 
+}
+button:hover {
+    background-color: #4A081E;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 22px;
+    text-align: center;
+    color: #a1e0a9;
+    min-height: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 10px;
+}
